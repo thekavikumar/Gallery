@@ -1,0 +1,40 @@
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ff665b;
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: #ff665b;
+  font-weight: bold;
+  font-size: 24px;
+}
+label:hover {
+  background: #ff665b;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+.output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error {
+  color: #ff2414;
+}
+
+.progressBar {
+  height: 5px;
+  background: #ff665b;
+  margin-top: 20px;
+}
