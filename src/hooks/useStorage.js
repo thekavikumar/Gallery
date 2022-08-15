@@ -28,6 +28,7 @@ const useStorage = ({ file, user }) => {
           const created = serverTimestamp();
           addDoc(collectionRef, { url, created });
           setUrl(url);
+          return;
         });
       }
     );
