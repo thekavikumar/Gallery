@@ -41,3 +41,21 @@ p {
   color: white;
   transition: all 0.3s ease-in-out;
 }
+
+.mode {
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  margin-left: 15px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.fa-moon {
+  color: white;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
