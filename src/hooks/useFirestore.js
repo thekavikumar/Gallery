@@ -24,7 +24,7 @@ function useFirestore({ collections }) {
     return () => unsub();
   }, [collections]);
 
-  return { docs };
+  return { docs, setDocs };
 }
 
 export default useFirestore;

@@ -9,6 +9,7 @@ import "./Title.css";
 
 function Title({ signed, setSigned, setUser, user }) {
   const [darkMode, setDarkMode] = React.useState(true);
+
   const signout = () => {
     signOut(auth)
       .then(() => {

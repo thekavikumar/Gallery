@@ -5,6 +5,7 @@ import App from "./App";
 import ThemeContextWrapper from "./ThemeContextWrapper.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <ThemeContextWrapper>
     <App />{" "}
