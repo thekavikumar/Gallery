@@ -62,7 +62,7 @@ function Title({ signed, setSigned, setUser, user }) {
         </div>
       </div>
       <h2>Your Pictures</h2>
-      <p>Welcome to My Gallery, Hope you love using this application.</p>
+      <p>You dont take photograph. You make it! Enjoy using this app</p>
     </div>
   );
 }
