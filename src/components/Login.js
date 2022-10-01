@@ -3,7 +3,7 @@ import "./Login.css";
 import { auth } from "../firebase/config";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-function Login({ setSigned, setUser }) {
+function Login({ setSigned, setUser ,darkMode,setDarkMode }) {
   const provider = new GoogleAuthProvider();
   const signIn = () => {
     signInWithPopup(auth, provider)
@@ -27,7 +27,7 @@ function Login({ setSigned, setUser }) {
   return (
     <div className="login">
       <h3>Sign In to Upload Images</h3>
-      <button type="button" className="login-with-google-btn" onClick={signIn}>
+      <button type="button" className="login-with-google-btn" onClick={signIn} style={!darkMode ? {boxShadow:'rgba(232, 70, 0, 0.5) 0px 10px 20px'}:{}}>
         Sign in with Google
       </button>
     </div>

@@ -7,9 +7,7 @@ import "../index.css";
 import { ThemeContext, themes } from "../hooks/theme";
 import "./Title.css";
 
-function Title({ signed, setSigned, setUser, user,quote }) {
-  const [darkMode, setDarkMode] = React.useState(true);
-
+function Title({ signed, setSigned, setUser, user,quote,darkMode,setDarkMode }) {
   const signout = () => {
     signOut(auth)
       .then(() => {
