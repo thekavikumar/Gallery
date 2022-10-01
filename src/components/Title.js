@@ -52,7 +52,7 @@ function Title({ signed, setSigned, setUser, user }) {
                 >
                   <i
                     className={
-                      darkMode ? "fas fa-sun fa-2x" : "fas fa-moon fa-2x"
+                      darkMode ? "fas fa-eclipse-alt fa-2x" : "fas fa-moon-stars fa-2x"
                     }
                   ></i>
                 </Button>
