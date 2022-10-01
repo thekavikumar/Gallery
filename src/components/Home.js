@@ -7,25 +7,30 @@ import Modal from "./Modal";
 import Login from "./Login";
 
 function Home() {
-  const [selectedImg, setSelectedImg] = useState(null);
-  const [signed, setSigned] = useState(false);
-  const [user, setUser] = useState(null);
-  return (
-    <div className="home">
-      <Title
-        signed={signed}
-        setSigned={setSigned}
-        setUser={setUser}
-        user={user}
-      />
-      {!signed && <Login setSigned={setSigned} setUser={setUser} />}
-      {signed && <Upload user={user} />}
-      {signed && <Image setSelectedImg={setSelectedImg} user={user} />}
-      {signed && selectedImg && (
-        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      )}
-    </div>
-  );
+	const [selectedImg, setSelectedImg] = useState(null);
+	const [signed, setSigned] = useState(false);
+	const [user, setUser] = useState(null);
+	return (
+		<div className="home">
+			<Title
+				signed={signed}
+				setSigned={setSigned}
+				setUser={setUser}
+				user={user}
+				quote={
+					!signed
+						? "You dont take photograph. You make it! Enjoy using this app"
+						: "Photography is the art of making memories tangible."
+				}
+			/>
+			{!signed && <Login setSigned={setSigned} setUser={setUser} />}
+			{signed && <Upload user={user} />}
+			{signed && <Image setSelectedImg={setSelectedImg} user={user} />}
+			{signed && selectedImg && (
+				<Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+			)}
+		</div>
+	);
 }
 
 export default Home;
