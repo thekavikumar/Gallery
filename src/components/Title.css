@@ -29,6 +29,7 @@ p {
   margin-left: 10px;
   padding: 8px;
   border-radius: 4px;
+  width: 125px;
   border: 1px solid #ffb8b3;
   background-color: #ffb8b3;
 }
