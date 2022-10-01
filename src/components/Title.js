@@ -7,7 +7,7 @@ import "../index.css";
 import { ThemeContext, themes } from "../hooks/theme";
 import "./Title.css";
 
-function Title({ signed, setSigned, setUser, user }) {
+function Title({ signed, setSigned, setUser, user,quote }) {
   const [darkMode, setDarkMode] = React.useState(true);
 
   const signout = () => {
@@ -62,7 +62,7 @@ function Title({ signed, setSigned, setUser, user }) {
         </div>
       </div>
       <h2>Your Pictures</h2>
-      <p>You dont take photograph. You make it! Enjoy using this app</p>
+      <p>{quote}</p>
     </div>
   );
 }
