@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-function Footer({ signed }) {
+function Footer() {
   return (
     <div className="fixed-bottom">
       <h2 className="footer">
