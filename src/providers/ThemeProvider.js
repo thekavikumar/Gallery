@@ -7,7 +7,8 @@ export const themes = {
 
 export const ThemeContext = createContext({
   theme: themes.dark,
-  changeTheme: () => { },
+  setTheme: () => null,
+  isDarkMode: true
 });
 
 // @emotion has its own ThemeProvider and hooks, but it is not being used anywhere yet?
