@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useMemo } from 'react';
+import React, { createContext, useCallback, useEffect, useMemo } from 'react';
 import useLocalStorage from 'use-local-storage';
 export const themes = {
   dark: 'dark',
@@ -16,6 +16,18 @@ export const ThemeProvider = ({ children }) => {
   const handleChangeTheme = useCallback((newTheme) => {
     setTheme(newTheme);
   }, [setTheme]);
+
+  useEffect(() => {
+    switch (theme) {
+      case themes.light:
+        document.body.classList.add("white-content");
+        break;
+      case themes.dark:
+      default:
+        document.body.classList.remove("white-content");
+        break;
+    }
+  }, [theme]);
 
   const value = useMemo(() => ({
     theme,

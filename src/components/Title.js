@@ -4,7 +4,7 @@ import { auth } from "../firebase/config";
 import { Button, Container, InputGroup } from "reactstrap";
 import { signOut } from "firebase/auth";
 import "../index.css";
-import { ThemeContext, useTheme } from "../hooks/useTheme";
+import { useTheme } from "../hooks/useTheme";
 import "./Title.css";
 import { themes } from '../providers/ThemeProvider';
 
@@ -40,23 +40,19 @@ function Title ({ signed, setSigned, setUser, user, quote }) {
             )}
           </div>
           <InputGroup>
-            <ThemeContext.Consumer>
-              {({ changeTheme }) => (
-                <Button
-                  className="mode"
-                  color="black"
-                  onClick={() => {
-                    setTheme(isDarkMode ? themes.light : themes.dark);
-                  }}
-                >
-                  <i
-                    className={
-                      isDarkMode ? "fas fa-sun fa-2x" : "fas fa-moon fa-2x"
-                    }
-                  ></i>
-                </Button>
-              )}
-            </ThemeContext.Consumer>
+            <Button
+              className="mode"
+              color="black"
+              onClick={() => {
+                setTheme(isDarkMode ? themes.light : themes.dark);
+              }}
+            >
+              <i
+                className={
+                  isDarkMode ? "fas fa-sun fa-2x" : "fas fa-moon fa-2x"
+                }
+              ></i>
+            </Button>
           </InputGroup>
         </div>
       </div>
