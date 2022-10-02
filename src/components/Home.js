@@ -7,42 +7,37 @@ import Modal from "./Modal";
 import Login from "./Login";
 import Footer from "./Footer";
 import Ffooter from "./Ffooter";
+import { useUser } from '../hooks/useUser';
 
-function Home() {
+function Home () {
+  const { signedIn } = useUser();
   const [darkMode, setDarkMode] = React.useState(true);
   const [selectedImg, setSelectedImg] = useState(null);
-  const [signed, setSigned] = useState(false);
-  const [user, setUser] = useState(null);
+
   return (
     <div className="home">
       <Title
-        signed={signed}
-        setSigned={setSigned}
-        setUser={setUser}
-        user={user}
         quote={
-          !signed
+          !signedIn
             ? "You dont take photograph. You make it! Enjoy using this app"
             : "Photography is the art of making memories tangible."
         }
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-      {!signed && (
+      {!signedIn && (
         <Login
-          setSigned={setSigned}
-          setUser={setUser}
           darkMode={darkMode}
           setDarkMode={setDarkMode}
         />
       )}
-      {signed && <Upload user={user} />}
-      {signed && <Image setSelectedImg={setSelectedImg} user={user} />}
-      {signed && selectedImg && (
+      {signedIn && <Upload />}
+      {signedIn && <Image setSelectedImg={setSelectedImg} />}
+      {signedIn && selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
-      {signed && <Ffooter />}
-      {!signed && <Footer />}
+      {signedIn && <Ffooter />}
+      {!signedIn && <Footer />}
     </div>
   );
 }

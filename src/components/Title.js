@@ -6,13 +6,14 @@ import { signOut } from "firebase/auth";
 import "../index.css";
 import { ThemeContext, themes } from "../hooks/theme";
 import "./Title.css";
+import { useUser } from '../hooks/useUser';
 
-function Title({ signed, setSigned, setUser, user,quote,darkMode,setDarkMode }) {
+function Title ({ quote, darkMode, setDarkMode }) {
+  const { user, setUser, signedIn } = useUser();
   const signout = () => {
     signOut(auth)
       .then(() => {
         setUser(null);
-        setSigned(false);
       })
       .catch((error) => {
         // An error happened.
@@ -31,7 +32,7 @@ function Title({ signed, setSigned, setUser, user,quote,darkMode,setDarkMode }) 
                 sx={{ height: 45, width: 45 }}
               />
             )}
-            {signed && (
+            {signedIn && (
               <button className="signOut" onClick={signout}>
                 Sign Out
               </button>

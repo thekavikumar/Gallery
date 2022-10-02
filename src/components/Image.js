@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 
 import { firestore } from "../firebase/config";
 import { deleteDoc, doc } from "firebase/firestore";
+import { useUser } from '../hooks/useUser';
 
-function Image({ setSelectedImg, user }) {
+function Image ({ setSelectedImg }) {
+  const { user } = useUser();
   const { docs, setDocs } = useFirestore({ collections: user.displayName });
-  function deleteImage(id) {
+  function deleteImage (id) {
     setDocs((pre) => {
       return pre.filter((item, index) => {
         if (index == id) {
