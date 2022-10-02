@@ -3,18 +3,20 @@ import "./Login.css";
 import { auth } from "../firebase/config";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useTheme } from '../hooks/useTheme';
+import { useUser } from '../hooks/useUser';
 
-function Login ({ setSigned, setUser }) {
+function Login () {
   const { isDarkMode } = useTheme();
+  const { setUser } = useUser();
+
   // check if user is already signed in
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        setSigned(true);
         setUser(user);
       }
     });
-  }, [setSigned, setUser]);
+  }, [setUser]);
 
   const provider = new GoogleAuthProvider();
   const signIn = () => {
@@ -25,7 +27,6 @@ function Login ({ setSigned, setUser }) {
         const user = result.user;
         console.log(user.photoURL);
         setUser(user);
-        setSigned(true);
         // ...
       })
       .catch((error) => {
@@ -39,7 +40,7 @@ function Login ({ setSigned, setUser }) {
   return (
     <div className="login">
       <h3>Sign In to Upload Images</h3>
-      <button type="button" className="login-with-google-btn" onClick={signIn} style={!isDarkMode ? { boxShadow: 'rgba(232, 70, 0, 0.5) 0px 10px 20px' } : {}}>
+      <button type="button" className="login-with-google-btn" onClick={signIn} style={!isDarkMode ? { boxShadow: 'rgba(232, 70, 0, 0.5) 0px 10px 20px' } : null}>
         Sign in with Google
       </button>
     </div>
