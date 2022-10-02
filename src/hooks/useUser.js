@@ -3,9 +3,9 @@ import { UserContext } from '../providers/UserProvider';
 
 /**
  * @returns {{
- *   user: object,
+ *   user: import('firebase/auth').User,
  *   signedIn: boolean,
- *   setUser: (user: object) => void
+ *   setUser: (user: import('firebase/auth').User) => void
  * }}
  */
 export const useUser = () => {
