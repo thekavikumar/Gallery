@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ffooter {
+  margin-bottom: 20px;
+}
+
+.ffooter > h2 {
+  font-size: 14px;
+  color: #e84600;
+  font-weight: bold;
+
+  /* text-align: center; */
+}

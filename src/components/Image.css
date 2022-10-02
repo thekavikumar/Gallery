@@ -1,8 +1,9 @@
 .imageGrid {
-  margin: 20px auto;
+  margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 25px;
+  margin-bottom: 20px;
 }
 .img-wrap {
   overflow: hidden;
@@ -29,13 +30,13 @@
   padding: 10px;
 }
 
-.card:hover{
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.image-delete:hover{
+.image-delete:hover {
   color: #e84600;
 }
 
@@ -47,14 +48,15 @@
   line-height: 25px;
 }
 
-.card-header{
+.card-header {
   height: 40px;
   background: transparent;
   border: none;
 }
 
-.card{
+.card {
   border: none;
+  background-color: transparent;
 }
 
 .backdrop {

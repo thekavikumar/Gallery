@@ -5,6 +5,8 @@ import Upload from "./Upload";
 import Image from "./Image";
 import Modal from "./Modal";
 import Login from "./Login";
+import Footer from "./Footer";
+import Ffooter from "./Ffooter";
 
 function Home() {
   const [darkMode, setDarkMode] = React.useState(true);
@@ -18,16 +20,29 @@ function Home() {
         setSigned={setSigned}
         setUser={setUser}
         user={user}
-        quote={!signed? "You dont take photograph. You make it! Enjoy using this app" :"Photography is the art of making memories tangible."}
-        darkMode ={darkMode}
-        setDarkMode ={setDarkMode}
+        quote={
+          !signed
+            ? "You dont take photograph. You make it! Enjoy using this app"
+            : "Photography is the art of making memories tangible."
+        }
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
-      {!signed && <Login setSigned={setSigned} setUser={setUser}  darkMode ={darkMode} setDarkMode ={setDarkMode}/>}
+      {!signed && (
+        <Login
+          setSigned={setSigned}
+          setUser={setUser}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+      )}
       {signed && <Upload user={user} />}
       {signed && <Image setSelectedImg={setSelectedImg} user={user} />}
       {signed && selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
+      {signed && <Ffooter />}
+      {!signed && <Footer />}
     </div>
   );
 }
