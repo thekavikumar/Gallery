@@ -12,6 +12,7 @@ h2 {
 p {
   text-align: center;
   margin-top: 20px;
+  margin-inline: 10%;
 }
 
 .head {
@@ -57,4 +58,44 @@ p {
 .right {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .head {
+    margin-inline: 5%;
+  }
+}
+@media (max-width: 480px) {
+  .head {
+    margin-inline: 3%;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  .sign > button {
+    font-size: smaller;
+    width: 90px;
+  }
+  .mode {
+    margin-left: 4px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .head {
+    margin-inline: 2%;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .sign > button {
+    font-size: small;
+    width: 70px;
+  }
 }
