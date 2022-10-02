@@ -21,14 +21,32 @@ function Image({ setSelectedImg, user }) {
       });
     });
   }
+
+  const [imgId, setImgId] = useState(0);
+
+
   return (
     <div className="imageGrid">
       {docs &&
         docs.map((doc, index) => (
+          <div key={doc.id}>
+          <div className="card">
+              <div className="card-header">
+              <button
+              className="image-delete"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              onClick={()=>{setImgId(index)}}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+</svg>
+            </button>
+              </div>
+              <div className="card-body">
           <motion.div
             className="img-wrap"
             id={index}
-            key={doc.id}
             layout
             whileHover={{ opacity: 1 }}
           >
@@ -40,13 +58,6 @@ function Image({ setSelectedImg, user }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
             />
-            <button
-              className="image-delete"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <i className="fas fa-trash-alt trash"></i>
-            </button>
             <div className="modal fade" id="exampleModal" tabIndex="-1">
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -75,7 +86,7 @@ function Image({ setSelectedImg, user }) {
                       className="btn btn-danger"
                       data-bs-dismiss="modal"
                       onClick={() => {
-                        deleteImage(index);
+                        deleteImage(imgId);
                       }}
                     >
                       Delete
@@ -85,6 +96,9 @@ function Image({ setSelectedImg, user }) {
               </div>
             </div>
           </motion.div>
+          </div>
+          </div>
+          </div>
         ))}
     </div>
   );

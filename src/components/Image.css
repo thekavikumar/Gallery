@@ -37,6 +37,14 @@
 
 .image-delete {
   cursor: pointer;
+  float: right;
+  background: none;
+  border: none;
+  line-height: 25px;
+}
+
+.card-header{
+  height: 40px;
 }
 
 .backdrop {
