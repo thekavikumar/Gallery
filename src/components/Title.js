@@ -42,7 +42,7 @@ function Title({ signed, setSigned, setUser, user,quote,darkMode,setDarkMode }) 
               {({ changeTheme }) => (
                 <Button
                   className="mode"
-                  color="link"
+                  color="black"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(darkMode ? themes.light : themes.dark);
