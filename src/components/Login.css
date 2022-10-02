@@ -42,5 +42,20 @@ h3 {
 
 .login {
   padding: 100px;
-  margin: 80px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .login {
+    padding: 20%;
+    margin: auto;
+  }
+}
+@media (max-width: 360px) {
+  h3 {
+    font-size: 1rem;
+  }
+  .login-with-google-btn {
+    font-size: smaller;
+  }
 }

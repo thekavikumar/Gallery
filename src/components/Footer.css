@@ -15,3 +15,9 @@
 
   /* text-align: center; */
 }
+
+@media (max-width: 420px) {
+  .footer {
+    margin-inline: 10%;
+  }
+}
