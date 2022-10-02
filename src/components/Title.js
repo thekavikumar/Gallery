@@ -6,8 +6,8 @@ import { signOut } from "firebase/auth";
 import "../index.css";
 import { useTheme } from "../hooks/useTheme";
 import "./Title.css";
-import { themes } from '../providers/ThemeProvider';
 import { useUser } from '../hooks/useUser';
+import { themes } from '../providers/ThemeProvider';
 
 function Title ({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
