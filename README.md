@@ -36,6 +36,16 @@ Amplication provides the following features:
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/framer-motion?style=for-the-badge)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/firebase?style=for-the-badge)
 
+## Run the project locally
+### Requiremnts
+- Node v^16
+```
+git clone https://github.com/thekavikumar/Gallery.git
+cd Gallery
+npm install
+npm run start
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
