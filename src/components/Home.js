@@ -7,37 +7,31 @@ import Modal from "./Modal";
 import Login from "./Login";
 import Footer from "./Footer";
 import Ffooter from "./Ffooter";
+import { useUser } from '../hooks/useUser';
 
 function Home () {
+  const { signedIn } = useUser();
   const [selectedImg, setSelectedImg] = useState(null);
-  const [signed, setSigned] = useState(false);
-  const [user, setUser] = useState(null);
+
   return (
     <div className="home">
       <Title
-        signed={signed}
-        setSigned={setSigned}
-        setUser={setUser}
-        user={user}
         quote={
-          !signed
+          !signedIn
             ? "You dont take photograph. You make it! Enjoy using this app"
             : "Photography is the art of making memories tangible."
         }
       />
-      {!signed && (
-        <Login
-          setSigned={setSigned}
-          setUser={setUser}
-        />
+      {!signedIn && (
+        <Login />
       )}
-      {signed && <Upload user={user} />}
-      {signed && <Image setSelectedImg={setSelectedImg} user={user} />}
-      {signed && selectedImg && (
+      {signedIn && <Upload />}
+      {signedIn && <Image setSelectedImg={setSelectedImg} />}
+      {signedIn && selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
-      {signed && <Ffooter />}
-      {!signed && <Footer />}
+      {signedIn && <Ffooter />}
+      {!signedIn && <Footer />}
     </div>
   );
 }

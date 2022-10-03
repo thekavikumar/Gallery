@@ -1,20 +1,22 @@
 import { Avatar } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { auth } from "../firebase/config";
-import { Button, Container, InputGroup } from "reactstrap";
+import { Button, InputGroup } from "reactstrap";
 import { signOut } from "firebase/auth";
 import "../index.css";
 import { useTheme } from "../hooks/useTheme";
 import "./Title.css";
+import { useUser } from '../hooks/useUser';
 import { themes } from '../providers/ThemeProvider';
 
-function Title ({ signed, setSigned, setUser, user, quote }) {
+function Title ({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
+  const { user, setUser, signedIn } = useUser();
+
   const signout = () => {
     signOut(auth)
       .then(() => {
         setUser(null);
-        setSigned(false);
       })
       .catch((error) => {
         // An error happened.
@@ -33,7 +35,7 @@ function Title ({ signed, setSigned, setUser, user, quote }) {
                 sx={{ height: 45, width: 45 }}
               />
             )}
-            {signed && (
+            {signedIn && (
               <button className="signOut" onClick={signout}>
                 Sign Out
               </button>
