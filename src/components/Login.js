@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Login.css";
 import { auth } from "../firebase/config";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -6,6 +6,17 @@ import { useTheme } from '../hooks/useTheme';
 
 function Login ({ setSigned, setUser }) {
   const { isDarkMode } = useTheme();
+  // check if user is already signed in
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setSigned(true);
+        setUser(user);
+      }
+    });
+  }, [setSigned, setUser]);
+
+
   const provider = new GoogleAuthProvider();
   const signIn = () => {
     signInWithPopup(auth, provider)
