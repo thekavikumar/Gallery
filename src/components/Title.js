@@ -6,13 +6,16 @@ import { signOut } from "firebase/auth";
 import "../index.css";
 import { useTheme } from "../hooks/useTheme";
 import "./Title.css";
-import { useUser } from '../hooks/useUser';
-import { themes } from '../providers/ThemeProvider';
+import { useUser } from "../hooks/useUser";
+import { themes } from "../providers/ThemeProvider";
+import DarkModeToggle from "react-dark-mode-toggle";
+import { useState } from "react";
+import { useEffect } from "react";
 
-function Title ({ quote }) {
+function Title({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
   const { user, setUser, signedIn } = useUser();
-
+  const [matches, setMatches] = useState();
   const signout = () => {
     signOut(auth)
       .then(() => {
@@ -22,6 +25,12 @@ function Title ({ quote }) {
         // An error happened.
       });
   };
+  useEffect(() => {
+    const handler = (e) => {
+      setMatches(e.matches);
+    };
+    window.matchMedia("(max-width: 320px)").addEventListener("change", handler);
+  });
   return (
     <div className="title">
       <div className="head">
@@ -41,21 +50,26 @@ function Title ({ quote }) {
               </button>
             )}
           </div>
-          <InputGroup>
-            <Button
+          {!matches && (
+            <DarkModeToggle
               className="mode"
-              color="black"
-              onClick={() => {
+              onChange={() => {
                 setTheme(isDarkMode ? themes.light : themes.dark);
               }}
-            >
-              <i
-                className={
-                  isDarkMode ? "fas fa-sun fa-2x" : "fas fa-moon fa-2x"
-                }
-              ></i>
-            </Button>
-          </InputGroup>
+              checked={isDarkMode}
+              size={80}
+            />
+          )}
+          {matches && (
+            <DarkModeToggle
+              className="mode"
+              onChange={() => {
+                setTheme(isDarkMode ? themes.light : themes.dark);
+              }}
+              checked={isDarkMode}
+              size={65}
+            />
+          )}
         </div>
       </div>
       <h2>Your Pictures</h2>
