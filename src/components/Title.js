@@ -1,7 +1,6 @@
 import { Avatar } from "@mui/material";
 import React from "react";
 import { auth } from "../firebase/config";
-import { Button, InputGroup } from "reactstrap";
 import { signOut } from "firebase/auth";
 import "../index.css";
 import { useTheme } from "../hooks/useTheme";
