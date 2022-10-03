@@ -48,6 +48,14 @@
   line-height: 25px;
 }
 
+.dark {
+  color: black;
+}
+
+.light {
+  color: white;
+}
+
 .card-header {
   height: 40px;
   background: transparent;
