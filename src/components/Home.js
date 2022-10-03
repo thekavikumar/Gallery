@@ -8,8 +8,7 @@ import Login from "./Login";
 import Footer from "./Footer";
 import Ffooter from "./Ffooter";
 
-function Home() {
-  const [darkMode, setDarkMode] = React.useState(true);
+function Home () {
   const [selectedImg, setSelectedImg] = useState(null);
   const [signed, setSigned] = useState(false);
   const [user, setUser] = useState(null);
@@ -25,15 +24,11 @@ function Home() {
             ? "You dont take photograph. You make it! Enjoy using this app"
             : "Photography is the art of making memories tangible."
         }
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
       />
       {!signed && (
         <Login
           setSigned={setSigned}
           setUser={setUser}
-          darkMode={darkMode}
-          setDarkMode={setDarkMode}
         />
       )}
       {signed && <Upload user={user} />}
