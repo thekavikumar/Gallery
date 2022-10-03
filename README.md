@@ -30,6 +30,13 @@ Amplication provides the following features:
 - Ready-to-deploy-app
 - Amplication console & CLI
 
+## Submit a feature request
+
+If you have an idea, or you're missing a capability that would make development easier and more robust, please [Submit feature request](https://github.com/thekavikumar/Gallery/issues/new).
+
+If a similar feature request already exists, don't forget to leave a "+1".
+If you add some more information such as your thoughts and vision about the feature, your comments will be embraced warmly :)
+
 ## Technologies
 
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/react?style=for-the-badge)
@@ -37,8 +44,8 @@ Amplication provides the following features:
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/firebase?style=for-the-badge)
 
 ## Run the project locally
-### Requiremnts
-- Node v^16
+### Requirements
+- [x] Node v^16
 ```
 git clone https://github.com/thekavikumar/Gallery.git
 cd Gallery
