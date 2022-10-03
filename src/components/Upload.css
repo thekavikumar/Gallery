@@ -9,14 +9,14 @@ label input {
 }
 label {
   display: block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ff665b;
-  border-radius: 50%;
+  width: 70%;
+  height: 200px;
+  border: 1px dashed #ff665b;
   margin: 10px auto;
   line-height: 22px;
-  color: #ff665b;
+  color: white;
   font-weight: bold;
+  border-radius: 20px;
   font-size: 24px;
 }
 label:hover {

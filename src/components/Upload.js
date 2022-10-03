@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import "./Upload.css";
+import { useTheme } from "../hooks/useTheme";
 
-function Upload () {
+function Upload() {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
+  const types = ["image/png", "image/jpeg", "image/jpg"];
+  const { isDarkMode } = useTheme();
 
   const changeHandler = (event) => {
-    const types = ["image/png", "image/jpeg", "image/jpg"];
     let selected = event.target.files[0];
     if (selected && types.includes(selected.type)) {
       setFile(selected);
@@ -18,12 +20,32 @@ function Upload () {
     }
   };
 
+  const handleOndragOver = (event) => {
+    event.preventDefault();
+  };
+
+  const handleOndrop = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    let selected = event.dataTransfer.files[0];
+
+    if (selected && types.includes(selected.type)) {
+      setFile(selected);
+      setError("");
+    } else {
+      setFile(null);
+      setError("Please drop an image file (png or jpg)");
+    }
+  };
+
   return (
     <div className="upload">
-      <form>
+      <form onDrop={handleOndrop} onDragOver={handleOndragOver}>
         <label htmlFor="fileInput">
           <input id="fileInput" type="file" onChange={changeHandler} />
-          <span>+</span>
+          <p style={{ color: isDarkMode ? "black" : "white" }}>
+            Click Or Drag Image Here
+          </p>
         </label>
         <div className="output">
           {error && <div className="error">{error}</div>}
