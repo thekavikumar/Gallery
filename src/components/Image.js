@@ -5,12 +5,15 @@ import { motion } from "framer-motion";
 
 import { firestore } from "../firebase/config";
 import { deleteDoc, doc } from "firebase/firestore";
-import { useUser } from '../hooks/useUser';
+import { useUser } from "../hooks/useUser";
+import { useTheme } from "../hooks/useTheme";
 
-function Image ({ setSelectedImg }) {
+function Image({ setSelectedImg }) {
   const { user } = useUser();
   const { docs, setDocs } = useFirestore({ collections: user.displayName });
-  function deleteImage (id) {
+  const { isDarkMode } = useTheme();
+
+  function deleteImage(id) {
     setDocs((pre) => {
       return pre.filter((item, index) => {
         if (index == id) {
@@ -33,7 +36,9 @@ function Image ({ setSelectedImg }) {
             <div className="card">
               <div className="card-header">
                 <button
-                  className="image-delete"
+                  className={
+                    isDarkMode ? "image-delete dark" : "image-delete light"
+                  }
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                   style={{ marginLeft: "10px" }}
@@ -53,7 +58,9 @@ function Image ({ setSelectedImg }) {
                   </svg>
                 </button>
                 <button
-                  className="image-delete"
+                  className={
+                    isDarkMode ? "image-delete dark" : "image-delete light"
+                  }
                   onClick={() => setSelectedImg(doc.url)}
                 >
                   <svg
@@ -86,7 +93,12 @@ function Image ({ setSelectedImg }) {
                   />
                   <div className="modal fade" id="exampleModal" tabIndex="-1">
                     <div className="modal-dialog">
-                      <div className="modal-content">
+                      <div
+                        className="modal-content"
+                        style={{
+                          color: "black",
+                        }}
+                      >
                         <div className="modal-header">
                           <h5 className="modal-title">Confirm deletion</h5>
                           <button
