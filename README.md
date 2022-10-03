@@ -1,4 +1,4 @@
-# Checkout the live website: https://gallery-37066.web.app/
+## Checkout the live website: https://gallery-37066.web.app/
 
 # Getting Started with Create React App
 
