@@ -12,7 +12,8 @@ Gallery is a simple website to store all your photos online
 </div>
 <br />
 
-![App Mockups](https://user-images.githubusercontent.com/72020411/193643320-8562426a-d2b8-44ed-9ba7-4b8c01efd282.png)
+![](https://user-images.githubusercontent.com/50093149/193647350-2482ffa5-b508-483a-95e6-714f53b68dcc.png)
+
 ## Deployment
 
 This project is deployed at [Netlify](https://www.netlify.com/) and can be accessed by clicking [here](https://gallery-37066.web.app/)
