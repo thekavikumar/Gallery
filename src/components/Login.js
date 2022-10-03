@@ -16,7 +16,6 @@ function Login ({ setSigned, setUser }) {
     });
   }, [setSigned, setUser]);
 
-
   const provider = new GoogleAuthProvider();
   const signIn = () => {
     signInWithPopup(auth, provider)
