@@ -56,6 +56,9 @@ npm run start
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+To contribute to this project do checkout the "Run the project locally" section to setup your env and do the changes and if any feature request do open it
+and make use the discussion tab to have your discussion with the community.
+Thank You! Happy Contributing 🎉
 
 ## License
 [![MIT](https://img.shields.io/badge/license-MIT-lightgreen)](https://github.com/thekavikumar/Gallery/blob/master/LICENSE.md)
