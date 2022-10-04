@@ -12,7 +12,7 @@ My Gallery is a simple website to store all your photos online
 ![GitHub Repo stars](https://img.shields.io/github/stars/thekavikumar/Gallery?style=social)
 </div>
 
-![master](https://github.com/thekavikumar/Gallery/blob/master/public/header.png?raw=true)
+![header](https://github.com/thekavikumar/Gallery/blob/master/public/header.png?raw=true)
 
 ## Deployment
 
