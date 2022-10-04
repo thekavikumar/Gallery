@@ -12,7 +12,7 @@ Gallery is a simple website to store all your photos online
 </div>
 <br />
 
-![](https://user-images.githubusercontent.com/50093149/193647350-2482ffa5-b508-483a-95e6-714f53b68dcc.png)
+![](https://github.com/thekavikumar/Gallery/blob/master/public/header.png?raw=true)
 
 ## Deployment
 
