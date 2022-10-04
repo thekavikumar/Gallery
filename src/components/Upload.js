@@ -41,11 +41,15 @@ function Upload() {
   return (
     <div className="upload">
       <form onDrop={handleOndrop} onDragOver={handleOndragOver}>
-        <label htmlFor="fileInput">
+        <label className={isDarkMode ? "dark" : "light"} htmlFor="fileInput">
           <input id="fileInput" type="file" onChange={changeHandler} />
-          <p style={{ color: isDarkMode ? "black" : "white" }}>
+          <span
+            style={{
+              color: isDarkMode ? "black" : "white",
+            }}
+          >
             Click Or Drag Image Here
-          </p>
+          </span>
         </label>
         <div className="output">
           {error && <div className="error">{error}</div>}

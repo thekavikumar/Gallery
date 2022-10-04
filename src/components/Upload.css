@@ -8,24 +8,32 @@ label input {
   opacity: 0;
 }
 label {
-  display: block;
-  width: 70%;
-  height: 200px;
-  border: 1px dashed #ff665b;
+  display: flex;
   margin: 10px auto;
-  line-height: 22px;
   color: white;
   font-weight: bold;
   border-radius: 20px;
+  width: 40%;
   font-size: 24px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
 }
 label:hover {
-  background: #ff665b;
+  border: 1px dashed #ff665b;
   color: white;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.2);
 }
+
+.dark {
+  border: 1px dashed black;
+}
+
+.light {
+  border: 1px dashed white;
+}
+
 .output {
   height: 60px;
   font-size: 0.8rem;
