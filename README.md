@@ -51,7 +51,7 @@ If you add some more information such as your thoughts and vision about the feat
 git clone https://github.com/thekavikumar/Gallery.git
 cd Gallery
 npm install
-npm run start
+npm start
 ```
 
 ## Contributing
