@@ -13,7 +13,7 @@ import { useMediaQueryMatch } from '../hooks/useMediaQueryMatch';
 function Title ({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
   const { user, setUser, signedIn } = useUser();
-  const smallScreen = useMediaQueryMatch(320);
+  const smallScreen = useMediaQueryMatch({ maxWidth: 320 });
   const signout = () => {
     signOut(auth)
       .then(() => {

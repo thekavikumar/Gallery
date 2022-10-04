@@ -3,11 +3,21 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 /**
- * @param {number} maxWidth 
+ * @param {{ maxWidth: number } | { minWidth: number }} width 
  * @returns {boolean}
  */
-export const useMediaQueryMatch = (maxWidth) => {
-  const mediaQueryList = useMemo(() => window.matchMedia(`(max-width: ${maxWidth}px)`), [maxWidth]);
+export const useMediaQueryMatch = (width) => {
+  const mediaQueryList = useMemo(() => {
+    let query = '';
+    if (width.maxWidth !== undefined) {
+      query += `(max-width: ${width.maxWidth}px)`;
+    }
+    if (width.minWidth !== undefined) {
+      if (width.maxWidth !== undefined) query += ' and ';
+      query += `(min-width: ${width.minWidth}px)`;
+    }
+    return window.matchMedia(query);
+  }, [width]);
   const [matches, setMatches] = useState(mediaQueryList.matches);
 
   useEffect(() => {
@@ -18,7 +28,7 @@ export const useMediaQueryMatch = (maxWidth) => {
     return () => {
       mediaQueryList.removeEventListener("change", handler);
     };
-  }, [maxWidth, mediaQueryList]);
+  }, [mediaQueryList]);
 
   return matches;
 };
