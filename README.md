@@ -1,72 +1,66 @@
-## Checkout the live website: https://gallery-37066.web.app/
+# Gallery
 
-# Getting Started with Create React App
+Gallery is a simple website to store all your photos online
+<br />
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Issues](https://shields.io/github/issues/thekavikumar/Gallery)](https://github.com/thekavikumar/Gallery/issues)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/thekavikumar/Gallery)](#)
+![GitHub contributors](https://img.shields.io/github/contributors/thekavikumar/Gallery)
+![GitHub](https://img.shields.io/github/license/thekavikumar/Gallery)
+![GitHub Repo stars](https://img.shields.io/github/stars/thekavikumar/Gallery?style=social)
+</div>
+<br />
 
-## Available Scripts
+![](https://user-images.githubusercontent.com/50093149/193647350-2482ffa5-b508-483a-95e6-714f53b68dcc.png)
 
-In the project directory, you can run:
+## Deployment
 
-### `npm start`
+This project is deployed at [Netlify](https://www.netlify.com/) and can be accessed by clicking [here](https://gallery-37066.web.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+Amplication provides the following features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Sleek UI
+- Dark mode
+- Production-ready APIs
+- Data Model
+- Continuous Github Sync
+- TypeScript and Node.js Source Code
+- Custom Code
+- Ready-to-deploy-app
+- Amplication console & CLI
 
-### `npm test`
+## Submit a feature request
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you have an idea, or you're missing a capability that would make development easier and more robust, please [Submit feature request](https://github.com/thekavikumar/Gallery/issues/new).
 
-### `npm run build`
+If a similar feature request already exists, don't forget to leave a "+1".
+If you add some more information such as your thoughts and vision about the feature, your comments will be embraced warmly :)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/react?style=for-the-badge)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/framer-motion?style=for-the-badge)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/thekavikumar/Gallery/firebase?style=for-the-badge)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run the project locally
+### Requirements
+- [x] Node v^16
+```
+git clone https://github.com/thekavikumar/Gallery.git
+cd Gallery
+npm install
+npm run start
+```
 
-### `npm run eject`
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributors
+<a href="https://github.com/thekavikumar/Gallery/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=thekavikumar/Gallery" />
+</a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[![MIT](https://img.shields.io/badge/license-MIT-lightgreen)](https://github.com/thekavikumar/Gallery/blob/master/LICENSE.md)
