@@ -57,10 +57,5 @@ npm run start
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Contributors
-<a href="https://github.com/thekavikumar/Gallery/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=thekavikumar/Gallery" />
-</a>
-
 ## License
 [![MIT](https://img.shields.io/badge/license-MIT-lightgreen)](https://github.com/thekavikumar/Gallery/blob/master/LICENSE.md)
