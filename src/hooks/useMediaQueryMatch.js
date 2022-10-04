@@ -3,21 +3,24 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 /**
- * @param {{ maxWidth: number } | { minWidth: number }} width 
+ * @param {{ maxWidth?: number, minWidth?: number }} opts 
  * @returns {boolean}
  */
-export const useMediaQueryMatch = (width) => {
+export const useMediaQueryMatch = (opts) => {
+  if (!opts || (opts.maxWidth === undefined && opts.minWidth === undefined)) {
+    throw new Error(`useMediaQueryMatch requires at least one of maxWidth or minWidth`);
+  }
   const mediaQueryList = useMemo(() => {
     let query = '';
-    if (width.maxWidth !== undefined) {
-      query += `(max-width: ${width.maxWidth}px)`;
+    if (opts.maxWidth !== undefined) {
+      query += `(max-width: ${opts.maxWidth}px)`;
     }
-    if (width.minWidth !== undefined) {
-      if (width.maxWidth !== undefined) query += ' and ';
-      query += `(min-width: ${width.minWidth}px)`;
+    if (opts.minWidth !== undefined) {
+      if (opts.maxWidth !== undefined) query += ' and ';
+      query += `(min-width: ${opts.minWidth}px)`;
     }
     return window.matchMedia(query);
-  }, [width]);
+  }, [opts]);
   const [matches, setMatches] = useState(mediaQueryList.matches);
 
   useEffect(() => {
