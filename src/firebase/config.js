@@ -10,12 +10,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  projectId: process.env.FIREBASE_ID,
-  storageBucket: process.env.FIREBASE_STORAGE,
-  messagingSenderId: process.env.FIREBASE_SENDERID,
-  appId: process.env.FIREBASE_APPID,
+  apiKey: "AIzaSyCaXZ2MyLqXXhPmCB3pn-_95efMlLlMe-0",
+  authDomain: "gallery-37066.firebaseapp.com",
+  projectId: "gallery-37066",
+  storageBucket: "gallery-37066.appspot.com",
+  messagingSenderId: "423303952734",
+  appId: "1:423303952734:web:86102cb85ad17664a637cf",
 };
 
 // Initialize Firebase
