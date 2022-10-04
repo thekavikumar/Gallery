@@ -1,18 +1,18 @@
-# Gallery
-
-Gallery is a simple website to store all your photos online
+# My Gallery
+<div align="center">
+My Gallery is a simple website to store all your photos online
+</div>
 <br />
 <div align="center">
-
+  
 [![Issues](https://shields.io/github/issues/thekavikumar/Gallery)](https://github.com/thekavikumar/Gallery/issues)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/thekavikumar/Gallery)](#)
 ![GitHub contributors](https://img.shields.io/github/contributors/thekavikumar/Gallery)
 ![GitHub](https://img.shields.io/github/license/thekavikumar/Gallery)
 ![GitHub Repo stars](https://img.shields.io/github/stars/thekavikumar/Gallery?style=social)
 </div>
-<br />
 
-![](https://github.com/thekavikumar/Gallery/blob/master/public/header.png?raw=true)
+![master](https://github.com/thekavikumar/Gallery/blob/master/public/header.png?raw=true)
 
 ## Deployment
 
