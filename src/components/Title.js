@@ -13,7 +13,7 @@ import { useMediaQueryMatch } from '../hooks/useMediaQueryMatch';
 function Title ({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
   const { user, setUser, signedIn } = useUser();
-  const matches = useMediaQueryMatch(320);
+  const smallScreen = useMediaQueryMatch(320);
   const signout = () => {
     signOut(auth)
       .then(() => {
@@ -49,7 +49,7 @@ function Title ({ quote }) {
               setTheme(isDarkMode ? themes.light : themes.dark);
             }}
             checked={isDarkMode}
-            size={matches ? 65 : 80}
+            size={smallScreen ? 65 : 80}
           />
         </div>
       </div>
