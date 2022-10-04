@@ -1,5 +1,5 @@
 import { Avatar } from "@mui/material";
-import React from "react";
+import React, { useMemo } from "react";
 import { auth } from "../firebase/config";
 import { signOut } from "firebase/auth";
 import "../index.css";
@@ -11,10 +11,15 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function Title({ quote }) {
+function Title ({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
   const { user, setUser, signedIn } = useUser();
   const [matches, setMatches] = useState();
+  const userInitials = useMemo(() => {
+    const parts = (user?.displayName ?? '').split(' ');
+    return `${parts[0][0] ?? '?'}${parts[1]?.[0] ?? ''}`.toUpperCase();
+  }, [user?.displayName]);
+
   const signout = () => {
     signOut(auth)
       .then(() => {
@@ -41,7 +46,9 @@ function Title({ quote }) {
                 alt="profile pic"
                 src={user.photoURL}
                 sx={{ height: 45, width: 45 }}
-              />
+              >
+                {userInitials}
+              </Avatar>
             )}
             {signedIn && (
               <button className="signOut" onClick={signout}>
