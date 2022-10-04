@@ -1,6 +1,6 @@
-# Gallery
+# My Gallery
 
-Gallery is a simple website to store all your photos online
+My Gallery is a simple website to store all your photos online.
 <br />
 <div align="center">
 
