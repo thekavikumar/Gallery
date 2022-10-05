@@ -6,7 +6,6 @@ import Image from "./Image";
 import Modal from "./Modal";
 import Login from "./Login";
 import Footer from "./Footer";
-import Ffooter from "./Ffooter";
 import { useUser } from '../hooks/useUser';
 
 function Home () {
@@ -30,8 +29,7 @@ function Home () {
       {signedIn && selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
-      {signedIn && <Ffooter />}
-      {!signedIn && <Footer />}
+      <Footer fixed={!signedIn} />
     </div>
   );
 }

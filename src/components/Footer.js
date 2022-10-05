@@ -1,13 +1,12 @@
 import React from "react";
 import "./Footer.css";
+import clsx from 'clsx';
 
-function Footer() {
+function Footer ({ fixed = false }) {
   return (
-    <div className="fixed-bottom">
-      <h2 className="footer">
-        Copyright © 2022 thekavikumar 💖 All rights reserved
-      </h2>
-    </div>
+    <h2 className={clsx("footer", fixed && "fixed-bottom")}>
+      Copyright © 2022 thekavikumar 💖 All rights reserved
+    </h2>
   );
 }
 
