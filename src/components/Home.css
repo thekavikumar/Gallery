@@ -1,4 +1,9 @@
 .home {
   max-width: 960px;
   margin: 0 auto;
+  font-size: 25px;
+}
+.quote{
+  font-size: 17px;
+  background-color: white;
 }

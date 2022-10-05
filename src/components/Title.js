@@ -27,7 +27,7 @@ function Title ({ quote }) {
   return (
     <div className="title">
       <div className="head">
-        <h1>My Gallery</h1>
+        <h1 className="titlebar">My Gallery</h1>
         <div className="right">
           <div className="sign">
             {user && (
@@ -53,7 +53,7 @@ function Title ({ quote }) {
           />
         </div>
       </div>
-      <h2>Your Pictures</h2>
+      <h2 style={{fontWeight:"bold",padding:"5px"}}>Your Pictures</h2>
       <p>{quote}</p>
     </div>
   );

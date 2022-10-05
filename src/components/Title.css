@@ -1,7 +1,16 @@
 h1 {
-  color: #e84600;
-  letter-spacing: 0px;
+  color: #e27242;
+  letter-spacing: 3px;
+  cursor: pointer;
+  /* background-color: rgba(72, 118, 203, 0.158); */
+
 }
+
+.title {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 
 h2 {
   font-size: 2.2rem;
@@ -26,15 +35,17 @@ p {
   display: flex;
   align-items: center;
 }
-.sign > button {
-  margin-left: 10px;
+
+.sign>button {
+  margin: 20px;
   padding: 8px;
   border-radius: 4px;
   width: 125px;
   border: 1px solid #ffb8b3;
   background-color: #ffb8b3;
 }
-.sign > button:hover {
+
+.sign>button:hover {
   border: 1px solid #ff665b;
   background-color: #ff665b;
   cursor: pointer;
@@ -60,7 +71,21 @@ p {
   .head {
     margin-inline: 5%;
   }
+
+  .titlebar {
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    justify-content: space-around;
+    font-size: 3.5rem;
+    align-items: center;
+    font-style: initial;
+  }
 }
+
 @media (max-width: 480px) {
   .head {
     margin-inline: 3%;
@@ -69,18 +94,23 @@ p {
 
 @media (max-width: 420px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 0.2rem;
+    letter-spacing: normal;
   }
-  .sign > button {
+
+  .sign>button {
     font-size: smaller;
     width: 90px;
   }
+
   .mode {
     margin-left: 4px;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   .head {
     margin-inline: 2%;
   }
@@ -90,7 +120,8 @@ p {
   h1 {
     font-size: 1rem;
   }
-  .sign > button {
+
+  .sign>button {
     font-size: small;
     width: 70px;
   }

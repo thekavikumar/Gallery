@@ -17,8 +17,8 @@ function Home () {
       <Title
         quote={
           !signedIn
-            ? "You dont take photograph. You make it! Enjoy using this app"
-            : "Photography is the art of making memories tangible."
+            ? "You dont take photograph. You make it! Enjoy using this app and store your photgraphs here!"
+            : "Photography is the art of making memories tangible.A picture speaks a thousand words......"
         }
       />
       {!signedIn && (
