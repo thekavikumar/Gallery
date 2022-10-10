@@ -86,6 +86,7 @@ function Image({ setSelectedImg }) {
                   <motion.img
                     src={doc.url}
                     onClick={() => setSelectedImg(doc.url)}
+                    className="uploadedImage"
                     alt="uploaded pic"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

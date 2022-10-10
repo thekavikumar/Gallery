@@ -8,9 +8,9 @@ import "./Title.css";
 import { useUser } from "../hooks/useUser";
 import { themes } from "../providers/ThemeProvider";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { useMediaQueryMatch } from '../hooks/useMediaQueryMatch';
+import { useMediaQueryMatch } from "../hooks/useMediaQueryMatch";
 
-function Title ({ quote }) {
+function Title({ quote }) {
   const { setTheme, isDarkMode } = useTheme();
   const { user, setUser, signedIn } = useUser();
   const smallScreen = useMediaQueryMatch({ maxWidth: 320 });
@@ -26,6 +26,17 @@ function Title ({ quote }) {
 
   return (
     <div className="title">
+      <div className="themeToggler">
+        <DarkModeToggle
+          className="mode"
+          onChange={() => {
+            setTheme(isDarkMode ? themes.light : themes.dark);
+          }}
+          checked={isDarkMode}
+          size={smallScreen ? 35 : 50}
+        />
+      </div>
+
       <div className="head">
         <h1>My Gallery</h1>
         <div className="right">
@@ -34,7 +45,7 @@ function Title ({ quote }) {
               <Avatar
                 alt="profile pic"
                 src={user.photoURL}
-                sx={{ height: 45, width: 45 }}
+                sx={{ height: 35, width: 35 }}
               />
             )}
             {signedIn && (
@@ -43,14 +54,6 @@ function Title ({ quote }) {
               </button>
             )}
           </div>
-          <DarkModeToggle
-            className="mode"
-            onChange={() => {
-              setTheme(isDarkMode ? themes.light : themes.dark);
-            }}
-            checked={isDarkMode}
-            size={smallScreen ? 65 : 80}
-          />
         </div>
       </div>
       <h2>Your Pictures</h2>
