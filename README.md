@@ -14,10 +14,6 @@ My Gallery is a simple website to store all your photos online
 
 ![header](https://github.com/thekavikumar/Gallery/blob/master/public/Banner.png?raw=true)
 
-## Deployment
-
-This project is deployed at [Netlify](https://www.netlify.com/) and can be accessed by clicking [here](https://gallery-37066.web.app/)
-
 ## Features
 Amplication provides the following features:
 
